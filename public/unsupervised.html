@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Supervised Machine Learning Algorithms</title>
+    <!-- Add your CSS stylesheets or link to external stylesheets here -->
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+<div class="navbar">
+	<button onclick="redirectTo(`home.html?code=${getUserCodeFromURL()}`)">Home</button>
+    <button onclick="redirectTo(`basics.html?code=${getUserCodeFromURL()}`)">Basics of Machine Learning</button>
+    <button onclick="redirectTo(`supervised.html?code=${getUserCodeFromURL()}`)">Supervised Machine Learning</button>
+    <button onclick="redirectTo(`unsupervised.html?code=${getUserCodeFromURL()}`)">Unsupervised Machine Learning</button>
+    <button onclick="redirectTo(`quiz.html?code=${getUserCodeFromURL()}`)">Quiz</button>
+  </div>
+    <header>
+        <h1>Supervised Machine Learning Algorithms</h1>
+        <p>Welcome to the guide on various algorithms used in supervised machine learning!</p>
+    </header>
+
+    <script>
+    function redirectTo(page) {
+      window.location.href = page;
+    }
+
+    function getUserCodeFromURL() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      return urlParams.get('code'); // Assuming 'code' is the parameter name in the URL
+    }
+  </script>
+
+    <main>
+        <section id="pca">
+            <h2>Principal Component Analysis (PCA)</h2>
+            <p>
+                Principal Component Analysis is a dimensionality reduction technique used to reduce the number of variables in a dataset while preserving its essential features.
+                It transforms the data into a new coordinate system to identify patterns and correlations.
+            </p>
+
+            <h3>Training Process</h3>
+            <p>
+                PCA identifies the principal components by finding the eigenvectors and eigenvalues of the covariance matrix of the dataset.
+                It orders these components based on the explained variance and selects a subset of them to represent the data.
+            </p>
+
+            <h3>Tasks and Example</h3>
+            <p>
+                For example, in image processing, PCA can be used to reduce the dimensions of image datasets while retaining the most critical features.
+                It can compress images by selecting the most important components and reconstructing images with reduced information.
+            </p>
+
+            <h3>Advantages</h3>
+            <ul>
+                <li>Reduces dimensionality while retaining important information</li>
+                <li>Speeds up learning algorithms by reducing computational complexity</li>
+                <li>Identifies patterns and correlations in high-dimensional data</li>
+            </ul>
+
+            <h3>Disadvantages</h3>
+            <ul>
+                <li>May not always provide interpretable results</li>
+                <li>Assumes linearity and Gaussian distributions in the data</li>
+                <li>Can lose information by discarding less significant components</li>
+            </ul>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FD4DeN81ODY?si=J7uAyMXVGQLqg1sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FgakZw6K1QQ?si=Kr2YZAQ39Sv3Xmec&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+
+<section id="k-means-clustering">
+            <h2>K-Means Clustering</h2>
+            <p>
+                K-Means Clustering is a popular unsupervised machine learning algorithm used for partitioning data into distinct groups (clusters) based on similarity.
+                It aims to minimize the sum of squared distances between data points and their respective cluster centroids.
+            </p>
+
+            <h3>Training Process</h3>
+            <p>
+                K-Means iteratively assigns data points to the nearest centroid and updates the centroids' positions until convergence.
+                The algorithm aims to minimize the within-cluster variance.
+            </p>
+
+            <h3>Tasks and Example</h3>
+            <p>
+                For instance, in customer segmentation for marketing, K-Means can group customers based on their purchasing behavior, allowing targeted marketing strategies for different customer segments.
+            </p>
+
+            <h3>Advantages</h3>
+            <ul>
+                <li>Simple and computationally efficient</li>
+                <li>Works well for large datasets</li>
+                <li>Robust to outliers</li>
+            </ul>
+
+            <h3>Disadvantages</h3>
+            <ul>
+                <li>Requires the number of clusters (K) to be predefined and optimized</li>
+                <li>Sensitive to initial centroid placement</li>
+                <li>May converge to local optima based on initial configurations</li>
+            </ul>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/R2e3Ls9H_fc?si=W1MGbP138s4vNFFb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>			
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4b5d3muPQmA?si=h_HbXMnQmOwLHBBt&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+
+<section id="hierarchical-clustering">
+            <h2>Hierarchical Clustering</h2>
+            <p>
+                Hierarchical Clustering is an unsupervised machine learning technique that creates a tree of clusters, also known as a dendrogram.
+                It builds a hierarchy of clusters by iteratively merging or splitting data points based on their similarity.
+            </p>
+
+            <h3>Training Process</h3>
+            <p>
+                Hierarchical Clustering can be performed using agglomerative (bottom-up) or divisive (top-down) approaches.
+                Agglomerative clustering starts with individual data points as separate clusters and merges them based on similarity until all data points belong to one cluster.
+            </p>
+
+            <h3>Tasks and Example</h3>
+            <p>
+                In biology, Hierarchical Clustering can be used to analyze gene expression patterns to identify groups of genes with similar behaviors, aiding in understanding genetic relationships.
+            </p>
+
+            <h3>Advantages</h3>
+            <ul>
+                <li>Does not require a predetermined number of clusters</li>
+                <li>Provides an informative visualization of cluster relationships (dendrogram)</li>
+                <li>Works well with small and medium-sized datasets</li>
+            </ul>
+
+            <h3>Disadvantages</h3>
+            <ul>
+                <li>Computationally expensive for large datasets</li>
+                <li>Difficult to interpret in high-dimensional spaces</li>
+                <li>May be sensitive to noise and outliers</li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ijUMKMC4f9I?si=0WP-pQRWrI3w3xhE&amp;start=28" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8QCBl-xdeZI?si=ZOjgvMREA_HSVNMr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2023 Your Learning Material. All rights reserved.</p>
+    </footer>
+</body>
+</html>

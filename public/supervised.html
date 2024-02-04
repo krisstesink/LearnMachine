@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supervised Machine Learning</title>
+    <!-- Add your CSS stylesheets or link to external stylesheets here -->
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <button onclick="redirectTo(`home.html?code=${getUserCodeFromURL()}`)">Home</button>
+    <button onclick="redirectTo(`basics.html?code=${getUserCodeFromURL()}`)">Basics of Machine Learning</button>
+    <button onclick="redirectTo(`supervised.html?code=${getUserCodeFromURL()}`)">Supervised Machine Learning</button>
+    <button onclick="redirectTo(`unsupervised.html?code=${getUserCodeFromURL()}`)">Unsupervised Machine Learning</button>
+    <button onclick="redirectTo(`quiz.html?code=${getUserCodeFromURL()}`)">Quiz</button>
+  </div>
+    <header>
+        <h1>Supervised Machine Learning</h1>
+        <p>Welcome to the guide on Supervised Machine Learning and its algorithms!</p>
+    </header>
+
+    <script>
+    function redirectTo(page) {
+      window.location.href = page;
+    }
+
+    function getUserCodeFromURL() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      return urlParams.get('code'); // Assuming 'code' is the parameter name in the URL
+    }
+  </script>
+
+    <main>
+<section id="svm">
+            <h2>Support Vector Machines (SVM)</h2>
+            <p>
+                Support Vector Machines (SVM) are powerful supervised learning models used for classification and regression tasks.
+                SVMs work by finding the optimal hyperplane that best separates different classes in the input data.
+            </p>
+
+            <h3>Training Process</h3>
+            <p>
+                SVMs aim to find the hyperplane that maximizes the margin between different classes by identifying support vectors,
+                data points that are closest to the decision boundary.
+            </p>
+
+            <h3>Tasks and Example</h3>
+            <p>
+                For instance, in a binary classification task for email spam detection, an SVM can classify emails as spam or non-spam based
+                on various features such as keywords, sender information, and content.
+            </p>
+
+            <h3>Advantages</h3>
+            <ul>
+                <li>Effective in high-dimensional spaces</li>
+                <li>Works well with clear margin of separation</li>
+                <li>Can handle non-linear decision boundaries with kernel functions</li>
+            </ul>
+
+            <h3>Disadvantages</h3>
+            <ul>
+                <li>Computationally intensive with large datasets</li>
+                <li>Sensitive to noise and outliers</li>
+                <li>Choosing the appropriate kernel can be subjective</li>
+            </ul>
+            <p>For a brief introduction to SVMs, see the first video below. The second video provides a more detailed and in depth look into SVMs.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_YPScrckx28?si=KQzDADAFPf_nlebl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/efR1C6CvhmE?si=1ETAECv-jI_RH5-R&amp;start=40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+
+        <section id="knn">
+            <h2>K-Nearest Neighbors (KNN)</h2>
+            <p>
+                K-Nearest Neighbors (KNN) is a simple yet effective supervised learning algorithm used for both classification and regression tasks.
+                KNN makes predictions based on the majority vote or average of the 'K' nearest data points in the feature space.
+            </p>
+
+            <h3>Training Process</h3>
+            <p>
+                KNN doesn't involve explicit training. Instead, it stores all available data and makes predictions based on similarity measures (e.g., Euclidean distance) during inference.
+            </p>
+
+            <h3>Tasks and Example</h3>
+            <p>
+                For instance, in a classification task for digit recognition, given an input image of a digit, KNN identifies the 'K' nearest training images and assigns the digit label based on majority voting among those neighbors.
+            </p>
+
+            <h3>Advantages</h3>
+            <ul>
+                <li>Simple and easy to understand</li>
+                <li>No training phase, faster inference</li>
+                <li>Adapts well to changes in the dataset</li>
+            </ul>
+
+            <h3>Disadvantages</h3>
+            <ul>
+                <li>Computationally expensive for large datasets</li>
+                <li>Sensitive to irrelevant and noisy features</li>
+                <li>Requires careful selection of the optimal 'K' value</li>
+            </ul>
+            <p>The following videos both provide an introduction to KNN:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0p0o5cmgLdE?si=XjzBvgvq3RI7q8fv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HVXime0nQeI?si=SlTN16WhwWIiYvmH&amp;start=21" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+
+                <section id="linear-regression">
+            <h2>Linear Regression</h2>
+            <p>
+                Linear Regression is a fundamental supervised learning algorithm used for predicting numerical values (continuous variables).
+                It establishes a linear relationship between the input features and the target variable.
+            </p>
+
+            <h3>Training Process</h3>
+            <p>
+                Linear Regression estimates the coefficients (weights) of the input features to fit a line that best represents the relationship between the features and the target variable.
+                The model is trained using techniques such as ordinary least squares (OLS) or gradient descent.
+            </p>
+
+            <h3>Tasks and Example</h3>
+            <p>
+                For instance, in real estate, Linear Regression can be employed to predict house prices based on features like area, number of bedrooms, etc.
+            </p>
+
+            <h3>Advantages</h3>
+            <ul>
+                <li>Simple and easy to interpret</li>
+                <li>Fast training and prediction</li>
+                <li>Works well with linear relationships</li>
+            </ul>
+
+            <h3>Disadvantages</h3>
+            <ul>
+                <li>Assumes a linear relationship, which may not hold for complex datasets</li>
+                <li>Sensitive to outliers</li>
+                <li>May overfit if the model is too complex</li>
+            </ul>
+
+            <p>For a brief introduction to Linear regression, see the first video below. The second video provides a more detailed and in depth look into Linear regression.</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CtsRRUddV2s?si=-yv60_c32WNIKcyS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7ArmBVF2dCs?si=FV1AyAkYrRfqh7hR&amp;start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+
+        <section id="logistic-regression">
+            <h2>Logistic Regression</h2>
+            <p>
+                Logistic Regression is a popular supervised learning algorithm used for binary classification tasks.
+                Despite its name, it's a classification algorithm rather than regression and predicts the probability of an instance belonging to a specific class.
+            </p>
+
+            <h3>Training Process</h3>
+            <p>
+                Logistic Regression employs the logistic function to model the probability of the dependent variable, fitting the model parameters using techniques like maximum likelihood estimation or gradient descent.
+            </p>
+
+            <h3>Tasks and Example</h3>
+            <p>
+                For instance, in a medical diagnosis task to predict whether a patient has a particular disease or not based on certain features like test results, Logistic Regression can output the probability of disease occurrence.
+            </p>
+
+            <h3>Advantages</h3>
+            <ul>
+                <li>Simple and efficient for binary classification</li>
+                <li>Provides probabilities for outcomes</li>
+                <li>Less prone to overfitting compared to complex models</li>
+            </ul>
+
+            <h3>Disadvantages</h3>
+            <ul>
+                <li>Assumes a linear relationship between features and the log-odds of the outcome</li>
+                <li>Doesn't work well with non-linear decision boundaries</li>
+                <li>Sensitive to outliers and multicollinearity</li>
+            </ul>
+            <p>For a brief introduction to Logistic regression, see the first video below. The second video provides a more detailed look into Logistic regression.</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EKm0spFxFG4?si=qDF8dcVlTGVZ-N5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yIYKR4sgzI8?si=OoYP9lLMlbxzHREI&amp;start=23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+
+        <section id="decision-trees">
+            <h2>Decision Trees</h2>
+            <p>
+                Decision Trees are versatile supervised learning algorithms used for both classification and regression tasks.
+                They construct tree-like structures to make decisions based on input features.
+            </p>
+
+            <h3>Training Process</h3>
+            <p>
+                Decision Trees recursively split the dataset based on features that best separate the data into homogeneous subsets (nodes) to create leaf nodes containing the target variable.
+            </p>
+
+            <h3>Tasks and Example</h3>
+            <p>
+                For instance, in a classification task for species identification based on flower characteristics, a Decision Tree can branch nodes based on feature thresholds to classify each flower into different species.
+            </p>
+
+            <h3>Advantages</h3>
+            <ul>
+                <li>Simple to understand and interpret</li>
+                <li>Can handle both numerical and categorical data</li>
+                <li>Implicitly performs feature selection</li>
+            </ul>
+
+            <h3>Disadvantages</h3>
+            <ul>
+                <li>Prone to overfitting, especially with deep trees</li>
+                <li>May create biased trees if certain classes dominate</li>
+                <li>Less effective for capturing linear relationships</li>
+            </ul>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JcI5E2Ng6r4?si=8MgzNGYQ81Pgz43b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter Unique Code</title>
+</head>
+<body>
+  <h1>Enter Your Unique Code</h1>
+  <input type="text" id="uniqueCodeInput">
+  <button onclick="submitCode()">Submit</button>
+
+  <script>
+    function submitCode() {
+      const enteredCode = document.getElementById('uniqueCodeInput').value;
+      if (enteredCode.trim() !== '') {
+        // Redirect to another page with the entered code as a query parameter
+        window.location.href = `home.html?code=${encodeURIComponent(enteredCode)}`;
+      } else {
+        alert('Please enter a valid code');
+      }
+    }
+  </script>
+</body>
+</html>
+

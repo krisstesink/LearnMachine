@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html
+ 
+lang="en">
+
+<head>
+
+  
+<meta
+ 
+charset="UTF-8">
+
+  
+<meta
+ 
+name="viewport"
+ 
+content="width=device-width, initial-scale=1.0">
+
+  
+<title>Basics of Machine Learning</title>
+<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <button onclick="redirectTo(`home.html?code=${getUserCodeFromURL()}`)">Home</button>
+    <button onclick="redirectTo(`basics.html?code=${getUserCodeFromURL()}`)">Basics of Machine Learning</button>
+    <button onclick="redirectTo(`supervised.html?code=${getUserCodeFromURL()}`)">Supervised Machine Learning</button>
+    <button onclick="redirectTo(`unsupervised.html?code=${getUserCodeFromURL()}`)">Unsupervised Machine Learning</button>
+    <button onclick="redirectTo(`quiz.html?code=${getUserCodeFromURL()}`)">Quiz</button>
+  </div>
+  <header>
+    <h1>Basics of Machine Learning</h1>
+  </header>
+
+    <script>
+    function redirectTo(page) {
+      window.location.href = page;
+    }
+
+    function getUserCodeFromURL() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      return urlParams.get('code'); // Assuming 'code' is the parameter name in the URL
+    }
+  </script>
+
+  <main>
+    <section id="purpose">
+      <h2>Purpose of Machine Learning</h2>
+      <p>Machine learning is a field of computer science that focuses on enabling computers to learn from data without being explicitly programmed.</p>
+      <p>Machine learning algorithms are trained on large amounts of data, and they can then be used to make predictions about new data. This is done by identifying patterns and relationships within the data that can be used to generalize to new situations.</p>
+
+      <p>Machine learning has revolutionized the way we interact with technology and the world around us. Its ability to analyze vast amounts of data and identify patterns has led to a wide range of applications, including:
+        <ul>
+          <li>Recommendation systems: <br> <br>
+            In the realm of e-commerce and online streaming platforms, machine learning has become indispensable for crafting personalized recommendations. By analyzing user behavior, purchase history, and search patterns, algorithms can predict items that align with individual preferences, enhancing user engagement and driving sales. <br> <br> </li>
+          <li>Virtual assistants <br> <br>
+            The advent of virtual assistants, powered by machine learning algorithms, has transformed how we interact with technology. These intelligent systems, such as voice-activated assistants and chatbots, employ natural language processing and machine learning to understand and respond to user queries, execute tasks, and provide personalized assistance, enhancing efficiency and convenience in various domains. <br> <br> </li>
+          <li>Fraud detection <br> <br>
+            Financial institutions rely heavily on machine learning to identify and combat fraudulent transactions. By analyzing patterns in spending habits, transaction amounts, and customer profiles, algorithms can flag suspicious activities and prevent financial losses. Continuously adapting to evolving fraud techniques remains a challenge, requiring machine learning models to stay at the forefront of digital crime.<br> <br> </li>
+          <li>Medical diagnosis <br> <br>
+            In healthcare, machine learning plays a pivotal role in medical diagnosis and prognostics. Algorithms analyze medical imaging, patient records, genetic data, and other healthcare-related information to assist physicians in diagnosing diseases, predicting potential health risks, and recommending personalized treatment plans. The integration of machine learning in healthcare aims to improve accuracy, efficiency, and patient outcomes. <br> <br> </li>
+          <li>Self-driving cars <br> <br> 
+            Machine learning is at the heart of autonomous vehicle technology, enabling self-driving cars to navigate complex environments, interpret traffic signals, and avoid obstacles. Deep learning algorithms analyze vast amounts of sensor data, including camera feeds, radar readings, and GPS information, to make real-time decisions for safe and efficient driving.<br></li>
+        </ul>
+      </p>
+
+      <p>As machine learning continues to develop, we can expect to see even more innovative applications that will impact our lives in many ways. See the video below for a brief introduction to Machine Learning:</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/9gGnTQTYNaE?si=Z4LikNupceDmJOAm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+      <p>For a more detailed introduction into machine learning, you can check out the following facinating lecture from MIT:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/h0e2HAPTGF4?si=6INLI1a40Gz77kr0&amp;start=492" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </section>
+
+    <section id="supervised">
+      <h2>Supervised vs. Unsupervised Learning</h2>
+      <p>There are two main types of machine learning: supervised learning and unsupervised learning.</p>
+
+      <h3>Supervised Machine Learning</h3>
+      <p>Supervised learning is the most common type of machine learning. It is used when you have a set of labeled data. Labeled data means that each data point has a corresponding correct answer. The algorithm learns from these labeled examples and makes predictions or decisions when provided with new, unseen data. It's akin to a teacher supervising the learning process, providing guidance throughout.</p>
+      <p>Supervised learning algorithms are trained by fitting the data to a model. The model is a mathematical representation of the relationship between the features of the data and the target variable. Once the model is trained, it can be used to make predictions on new data.</p>
+
+      <h4>Training Process:</h4>
+      <p>Supervised learning models learn from labeled training data, adjusting their parameters to minimize the difference between predicted and actual outputs.</p>
+
+      <h4>Types of Tasks:</h4>
+      <p>This type of learning is used for tasks such as classification and regression. Classification predicts a categorical output, while regression predicts a continuous numerical value.</p>
+
+      <h4>Example:</h4>
+      <p>In email spam detection, a supervised model learns from labeled emails (spam or not spam) to classify future incoming emails as either spam or legitimate.</p>
+
+      <h4>Advantages:</h4>
+      <p>Well-suited for tasks where the output is known and labeled data is available. It can generalize well to new, unseen data.</p>
+
+      <p>For a more detailed look into Supervised Machine Learning, click on the 'Supervised Machine Learning' button at the top of this page</p>
+
+
+      <h3>Unsupervised Machine Learning</h3>
+      <p>Unsupervised learning is used when you do not have any labeled data. In this case, the machine learning model is tasked with finding patterns, structures, or relationships in the data without being explicitly told what to look for. It's comparable to allowing the algorithm to explore and find its own patterns without supervision.</p>
+
+      <h4>Training Process:</h4>
+      <p>Algorithms in unsupervised learning try to identify patterns or groupings in data without explicit guidance or labeled examples.</p>
+
+      <h4>Types of Tasks:</h4>
+      <p>Common tasks include clustering, where data points are grouped based on similarities, and dimensionality reduction, which reduces the number of features while preserving important information.</p>
+
+      <h4>Example:</h4>
+      <p>Market segmentation in customer data, where an algorithm groups customers based on purchasing behavior without predefined categories.</p>
+
+      <h4>Advantages:</h4>
+      <p>Particularly useful when labeled data is scarce or expensive to obtain. Unsupervised methods can reveal hidden patterns or structures within data.</p>
+
+      <p>For a more detailed look into Unsupervised Machine Learning, click on the 'Unsupervised Machine Learning' button at the top of this page</p>
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed

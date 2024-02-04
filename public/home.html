@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Linking the external CSS file -->
+</head>
+<body>
+  <!-- Fixed navigation bar (navbar) -->
+  <div class="navbar">
+    <button onclick="redirectTo(`home.html?code=${getUserCodeFromURL()}`)">Home</button>
+    <button onclick="redirectTo(`basics.html?code=${getUserCodeFromURL()}`)">Basics of Machine Learning</button>
+    <button onclick="redirectTo(`supervised.html?code=${getUserCodeFromURL()}`)">Supervised Machine Learning</button>
+    <button onclick="redirectTo(`unsupervised.html?code=${getUserCodeFromURL()}`)">Unsupervised Machine Learning</button>
+    <button onclick="redirectTo(`quiz.html?code=${getUserCodeFromURL()}`)">Quiz</button>
+  </div>
+
+  <!-- Content below the navbar -->
+  <h1>Welcome</h1>
+  <!-- Add your content here -->
+
+  <!-- JavaScript for redirection -->
+  <script>
+    function redirectTo(page) {
+      window.location.href = page;
+    }
+
+    function getUserCodeFromURL() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      return urlParams.get('code'); // Assuming 'code' is the parameter name in the URL
+    }
+  </script>
+  <div id="content">
+      <main>
+        <p>Prepare yourself for an upcoming quiz that will delve into diverse topics in Machine Learning. Scheduled from <strong>January 8th to 10th</strong>, this quiz will cover the following Machine Learning topics:</p>
+        <ul>
+            <li>Basics of Machine Learning</li>
+            <li>Supervised Machine Learning</li>
+            <li>Unsupervised Machine Learning</li>
+        </ul>
+        <p>Accessing the study materials for each of these topics is straightforward. Simply select the corresponding button found at the top of this page to explore relevant resources. Each section contains materials to help you understand the subtopic, and be prepared for the upcoming quiz.</p>
+        <p>The quiz will be available by clicking the designated 'Quiz' button starting from Monday, 8th of January 00:00 CET. The quiz will be a series of timed multiple choice questions, and the final opportunity to acess the quiz will be Wednesday, 10th of January 23:59 CET. You can only take the quiz once, but you are free to take it anytime between the two dates mentioned.</p>
+        <p>Thank you for choosing to participate in this study!</p>
+    </main>
+
+  <script>
+    const img = document.getElementById('myImage');
+
+    img.onerror = function() {
+      console.log("Error loading image. File path searched:", img.src);
+    };
+  </script>
+  </div>
+
+  <script>
+    // Function to extract 'code' from URL query parameter
+    function getCodeFromURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('code');
+    }
+
+    // Get the entered code from the URL query parameter
+    const enteredCode = getCodeFromURL();
+    if (enteredCode) {
+      // Display the code or perform actions based on the code
+      console.log('Entered Code:', enteredCode);
+    } else {
+      console.log('No code entered.');
+    }
+  </script>
+</body>
+</html>
